@@ -38,7 +38,7 @@ Also replace ./cyclegan/scripts/train_cyclegan.sh [CycleGAN](https://github.com/
 The relevant training arguments can be found in ./cyclegan/options/train_options.py and ./cyclegan/options/train_options.py
 
 ## Generate transfered source domain images
-replace ./cyclegan/scripts/test_cyclegan.sh [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/test_cyclegan.sh in this repo.
+Replace ./cyclegan/scripts/test_cyclegan.sh [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/test_cyclegan.sh in this repo.
 
 ```
 ./cyclegan/scripts/test_cyclegan.sh
