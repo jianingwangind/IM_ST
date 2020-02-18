@@ -27,7 +27,8 @@ python ./classification/cifar_test.py
 ## Training model for Style Transfer
 * [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) is used to perform this task. Clone this repo and follow the instructions to install necessary tools and modules.
 
-In the original code, the model requires the input source and target domain images to have the same size. Since the images of these two domains differ greatly in image size, so replace the ./cyclegan/data/unaligned_dataset.py in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/unaligned_dataset.py in this repo. This enables the target domain images to be resized before cropped to a small image size. The resized target size is controled by the argument loadSize, please choose a reasonable value for different target domains.
+In the original code, the model requires the input source and target domain images to have the same size. Since the images of these two domains differ greatly in image size, so replace the ./cyclegan/data/unaligned_dataset.py in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/unaligned_dataset.py in this repo. This enables the target domain images to be resized before cropped to a small image size. The resized target size is controled by the argument loadSize, please choose a reasonable value for different target domains. In ./modifications/unaligned_dataset.py, A represents source domain and B represents target domain. Please give the corresponding paths to the datasets of the two domains.
+
 Also replace ./cyclegan/scripts/train_cyclegan.sh in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/train_cyclegan.sh in this repo.
 
 ```
