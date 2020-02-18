@@ -27,8 +27,8 @@ python ./classification/cifar_test.py
 ## Training model for Style Transfer
 * [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) is used to perform this task. Clone this repo and follow the instructions to install necessary tools and modules.
 
-In the original code, the model requires the input source and target domain images to have the same size. Since the images of these two domains differ greatly in image size, so replace the ./cyclegan/data/unaligned_dataset.py in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/unaligned_dataset.py in this repo. This enables the target domain images to be resized before cropped to a small image size. The resized size is controled by the argument loadSize, please choose a reasonable value for different target domains.
-Also replace ./cyclegan/scripts/train_cyclegan.sh [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/train_cyclegan.sh in this repo.
+In the original code, the model requires the input source and target domain images to have the same size. Since the images of these two domains differ greatly in image size, so replace the ./cyclegan/data/unaligned_dataset.py in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/unaligned_dataset.py in this repo. This enables the target domain images to be resized before cropped to a small image size. The resized target size is controled by the argument loadSize, please choose a reasonable value for different target domains.
+Also replace ./cyclegan/scripts/train_cyclegan.sh in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/train_cyclegan.sh in this repo.
 
 ```
 ./cyclegan/scripts/train_cyclegan.sh
@@ -38,7 +38,7 @@ Also replace ./cyclegan/scripts/train_cyclegan.sh [CycleGAN](https://github.com/
 The relevant training arguments can be found in ./cyclegan/options/train_options.py and ./cyclegan/options/train_options.py
 
 ## Generate transfered source domain images
-Replace ./cyclegan/scripts/test_cyclegan.sh [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/test_cyclegan.sh in this repo.
+Replace ./cyclegan/scripts/test_cyclegan.sh in [CycleGAN](https://github.com/jhoffman/pytorch-CycleGAN-and-pix2pix/) with ./modifications/test_cyclegan.sh in this repo.
 
 ```
 ./cyclegan/scripts/test_cyclegan.sh
